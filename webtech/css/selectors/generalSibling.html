@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+  <style>
+    /* *{
+        border: 2px solid black;
+      padding: 10px;
+      margin: 10px;
+    } */
+   div ~ h1{
+    color: rgb(11, 109, 13);
+    background-color: rgb(227, 231, 193);
+   }
+   section ~ h3{
+    color: rgb(164, 26, 37);
+    background-color: lightyellow;
+   }
+    div{
+      border: 2px solid black;
+      padding: 10px;
+      margin: 10px;
+    }
+   
+  </style>
+</head>
+<body style="border: 1px solid black; padding: 10px; margin: 10px;">
+
+  <h1>Combinator selector - General Sibling Selector (~)</h1>
+  <h1>style applied to all selected sibling </h1>
+  <h1>h1 before of div</h1>
+  <p>para before div</p>
+  <h3>h3 before div</h3>
+  <div>
+    <h1>h1 inside div</h1>
+    <p>para inside div</p>
+    <h3>h3 inside div</h3>
+    <section>
+      <h2> h2 of section inside div</h2>
+      <h3>h3 of section inside div</h3>
+    </section>
+  </div>
+  <!-- h1 is adjacent to div -->
+  <h1>h1 after  div</h1>
+  <p>para after div</p>
+  <section>
+      <h2> h2 of section inside div</h2>
+      <h3>h3 of section inside div</h3>
+    </section>
+  <h3>h3 after div</h3>
+  <h1>h1 after div</h1>
+</body>
+</html>
