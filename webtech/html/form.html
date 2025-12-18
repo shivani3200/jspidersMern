@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Form</title>
+</head>
+<body>
+  <h1>HTML Forms</h1>
+  <form>
+   <fieldset>
+    <legend>Personal Information</legend>
+     <label for="usn">Username</label>
+    <input type="text" name="usn" id="usn">
+    <br><br>
+
+    <label for="pwd">Password</label>
+    <input type = "password" name = "pwd" id = "pwd">
+    <br><br>
+
+    <label for="email">email</label>
+    <input type="email" name="email" id="email">
+    <br><br>
+
+    <label for="dob">DOB</label>
+    <input type="date" name="dob" id="dob">
+    <br><br>
+    <br><br>
+    Gender: 
+    <input type="radio" name="gender" id="male" value="male">
+    <label for="male">Male</label>
+    <input type="radio" name="gender" id="female" value="female">
+    <label for="female">Female</label>
+    <input type="radio" name="gender" id="other" value="other">
+    <label for="other">Other</label>
+
+   </fieldset>
+    <br><br>
+    <fieldset>
+      <legend>other Information</legend>
+
+      <label>City</label>
+      <select name = "city" id = "city">
+        <option value="">select city</option>
+        <option value="blr">Bangalore</option>
+        <option value="Mysore">Mysore</option>
+        <option value="Hubli">Hubli</option>
+        <option value="Dharwad">Dharwad</option>
+      </select>
+      <br><br>
+      <label for ="add">Address</label>
+      <textarea type="" name = "add" id = "add" rows="6" cols="25" ></textarea>
+      
+    </fieldset>
+    <br><br>
+    <input type="checkbox" name="check" id="check">
+      <label for="check"> check me</label>
+    <br><br>
+    <input type="submit">
+    <input type="reset">
+    <button>click me</button>
+  </form>
+  
+</body>
+</html>

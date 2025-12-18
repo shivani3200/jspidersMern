@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Babysitter Form</title>
+</head>
+<body>
+  <h1 align="center">Babysitter Form</h1>
+  <br><br><br><br>
+  <form>
+    <!-- fieldset -->
+    <fieldset>
+      <!-- legend -->
+      <legend> Personal Information</legend>
+      <!-- text -->
+      <label for = "name">Name:</label>
+      <input type = "text" name = "name" id = "name">
+      <br><br>
+      <!-- email -->
+      <label for = "email">Email:</label>
+      <input type = "email" name = "email" id = "email">
+      <br><br>  
+      <!-- number -->
+      <label for = "phone">Phone Number:</label>
+      <input type = "tel" name = "phone" id = "phone">
+      <br><br>
+      <label for = "aadhar">Aadhar card number:</label>
+      <input type = "number" name = "aadhar" id = "aadhar">
+      <br><br>
+      <label for = "age">Age:</label>
+      <input type = "number" name = "age" id = "age">
+      <br><br>
+      <!-- date -->
+      <label for = "dob">Date of Birth:</label>
+      <input type = "date" name = "dob" id = "dob">
+      <br><br>
+
+      <!-- radio -->
+      <label for = "gender">Gender:</label>
+      <input type = "radio" name = "gender" id = "male" value = "male">
+      <label for = "male">Male</label>
+      <input type = "radio" name = "gender" id = "female" value = "female">
+      <label for = "female">Female</label>
+      <br><br>
+      <!-- textarea -->
+      <label for = "address">Current Address:</label>
+      <textarea name = "address" id = "address" rows = "10" cols = "30"></textarea> 
+      <br><br>
+      <!-- file -->
+      <label for = "profile_picture">Profile Picture:</label>
+      <input type = "file" name = "profile_picture" id = "profile_picture">
+    </fieldset>
+    <fieldset>
+      <legend>Experience</legend>
+      <label for = "experience">Years of Experience:</label>
+      <input type = "number" name = "experience" id = "experience">
+      <br><br>
+      <!-- checkbox -->
+      <label for="age_group">Age group comfortable with:</label>
+        <input type = "checkbox" name = "age_group" id = "age_group0-2" value = "0-2">0-2
+        <input type = "checkbox" name = "age_group" id = "age_group3-5" value = "3-5">3-5
+        <input type = "checkbox" name = "age_group" id = "age_group6-12" value = "6-12">6-12
+        <input type = "checkbox" name = "age_group" id = "age_group13+" value = "13+">13+
+<br><br>
+      <label for="availability">Availability:</label>
+      <input type="checkbox" name="availability" id="availability_weekdays" value="weekdays">Weekdays
+      <input type="checkbox" name="availability" id="availability_weekends" value="weekends">Weekends
+      <input type="checkbox" name="availability" id="availability_nights" value="nights">Nights
+<br><br>
+     <label for="employment_type">Preferred Employment Type:</label>
+      <input type="radio" name="employment_type" id="employment_type_full_time" value="full_time">
+      <label for="employment_type_full_time">Full time</label>
+      <input type="radio" name="employment_type" id="employment_type_part_time" value="part_time">
+      <label for="employment_type_part_time">Part time</label>
+
+      <br><br><br>
+      <input type="submit" value="Submit Application">
+      <input type="reset" value="Reset Form">
+    </fieldset>
+  </form>
+
+  
+</body>
+</html>

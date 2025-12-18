@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+  <style>
+    /* *{
+        border: 2px solid black;
+      padding: 10px;
+      margin: 10px;
+    } */
+    div > h1, div > p, div > h3 {
+      color: rgb(0, 9, 128);
+      background-color: lightgray;
+    }
+    div{
+      border: 2px solid black;
+      padding: 10px;
+      margin: 10px;
+    }
+    section > h2 {
+      color: brown;
+      background-color: lightyellow;
+    }
+  </style>
+</head>
+<body style="border: 1px solid black; padding: 10px; margin: 10px;">
+
+  <h1>Combinator selector - Child Selector (>)</h1>
+  <h1>style applied to only current Child</h1>
+  <h1>h1 before of div</h1>
+  <p>para before div</p>
+  <h3>h3 before div</h3>
+  <div>
+    <h1>h1 inside div</h1>
+    <p>para inside div</p>
+    <h3>h3 inside div</h3>
+    <section>
+      <h2> h2 of section inside div</h2>
+      <h3>h3 of section inside div</h3>
+    </section>
+  </div>
+  <h1>h1 after of div</h1>
+  <p>para after div</p>
+  <h3>h3 after div</h3>
+</body>
+</html>
