@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>attribute selector</title>
+
+  <style>
+    p[class]{
+      color: red;
+    }
+    p[class ="text-2"]{
+      color: rgb(0, 34, 255);
+    }
+    a[href]{
+      color: blueviolet;
+    }
+    a[target]{
+      color: rgb(111, 68, 11);
+    }
+    a[target="_self"]{
+      color: rgb(16, 149, 22);
+    }
+  </style>
+</head>
+<body>
+  <h1>Attribute selector</h1>
+  <p class="text">Lorem ipsum dolor sit amet.</p>
+  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi, est.</p>
+  <p class = 'text-2'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex harum eius facilis minima. Blanditiis, voluptas.</p>
+
+  <a href="#" target="_blank" >link 1</a>
+  <a href="#">link 2</a>
+  <a href="#" target="_self"> link 3</a>
+
+</body>
+</html>
