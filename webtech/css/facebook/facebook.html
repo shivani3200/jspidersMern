@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <Link href="facebook.css" rel="stylesheet">
+    <title>Facebook Login Page</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div id="logo">facebook</div>
+        <div class="navbar-right">
+            <form>
+                <label for="emailorphone">Email or Phone</label>
+                <br>
+                <input type="text">
+                <span><label for="password">Password</label>
+                    <input type="password" name="password" id="password">
+                    <small style="color: rgba(135, 136, 137, 0.749);">forgotten password?</small>
+                </span>
+
+                <button id="btn-login">Login</button>
+            </form>
+        </div>
+    </nav>
+    <main class="main">
+        <div class="main-left">
+            <img src="./Facebook-world.jpg" alt="no image" style="width: 100%; height: fit-content;">
+        </div>
+
+        <div class="main-right">
+            <h1 class="margin">Create an account</h1>
+            <p class="margin">It's quick and easy</p>
+            <form>
+                <input type="text" name="first-name" id="first-name" placeholder="First name" class="input margin">
+                <input type="text" name="last-name" id="first-name" placeholder="Last name" class="input margin">
+                <br>
+                <input type="text" name="email" id="email" placeholder="Mobile number or email address"
+                    class="input margin">
+                <br>
+                <input type="password" name="password" id="password" placeholder="New password" class="input margin">
+                <br>
+                <label for="birthday" style="color: gray; font-weight: 600;" class="margin"><b>Birthday</b></label>
+                <br>
+                <input type="date" name="birthday" id="birthday" class="margin">
+                <br>
+                <label for="gender" style="color: gray; font-weight: 600;" class="margin">Gender</label>
+                <br>
+                <input type="radio" name="gender" id="female" value="female">
+                <label for="female">Female</label>
+                <input type="radio" name="gender" id="male" value="male">
+                <label for="male">Male</labels>
+                    <input type="radio" name="gender" id="other" value="other">
+                    <label for="other">other</label>
+
+            </form>
+            <p class="margin">By clicking on Sign Up, you agree to our <span class="terms"> Terms, Data policy </span> and  <span class="terms">Cookie Policy</span>, You may receive SMS
+                notification from us and can opt out at any time.</p>
+                <button class="btn-signup margin">Sign up</button>
+        </div>
+    </main>
+</body>
+
+</html>
