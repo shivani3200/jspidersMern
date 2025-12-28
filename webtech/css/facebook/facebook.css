@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    height: 100px;
+    width: 100%;
+    background-color: rgb(68, 24, 143);
+    color: white;
+    padding: 10px;
+    position: static;
+    align-items: center;
+    top: 0;
+}
+#logo{
+  font-size: 64px; 
+  margin-left: 50px; 
+  margin-top: 0px;
+  font-weight: 800;
+}
+.navbar-right{
+margin-left: 50% ;
+margin-top: -60px;
+align-items: center;
+}
+#btn-login{
+    padding: 5px 15px;
+    background-color: rgb(87, 29, 185);
+    border-radius: 4px;
+    border: 1px solid black;
+    color: white;
+    font-weight: 500;
+}
+.main{
+    height: auto;
+    width: 100%;
+}
+.main-left{
+    width: 50%;
+    height: inherit;
+}
+.main-right{
+    margin-left: 50%;
+    margin-top: -25%;
+    padding: 20px;
+}
+.margin{
+    margin: 10px;
+}
+.input{
+    padding:10px;
+}
+.terms{
+    color: blue;
+}
+.btn-signup{
+    color: white;
+    font-weight: 600;
+    font-size: 24px;
+    background-color: rgb(5, 106, 51);
+    padding: 10px 40px;
+    border: 1px solid black;
+    border-radius: 8px;
+}
