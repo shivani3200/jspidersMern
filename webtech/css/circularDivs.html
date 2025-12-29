@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>circular div</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .div{
+            background-color: rgb(217, 253, 119);
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            border-radius: 16px;
+            margin: 5px;
+            padding: 20px;
+            position: absolute;
+        }
+        .circle{
+            border-radius: 50%;
+            position: relative;
+            margin-left: 50%;
+            margin-top: 50%;
+            width: 200px;
+            height: 200px;
+            background-color: rgb(62, 4, 4);
+            border: 1px solid rgb(189, 72, 72);
+        }
+        .top{
+            bottom: 200px;
+        }
+        .bottom{
+            top: 210px;
+        }
+        .left{
+            right: 200px;
+        }
+        .right{
+            left: 200px;
+        }
+    </style>
+</head>
+<body style="background-color: rgb(205, 103, 8);">
+    <div >
+        <div class="circle">
+        <div class="div top">div - 1</div>
+        <div class="div top" style="left: 100px;">div - 2</div>
+        <div class="div right" >div - 3</div>
+        <div class="div right" style="top: 100px;">div - 4</div>
+        <div class="div left">div - 5</div>
+        <div class="div left" style="top: 100px;">div - 6</div>
+        <div class="div bottom">div - 7</div>
+        <div class="div bottom" style="left: 100px;">div - 8</div>
+    </div>
+       
+    </div>
+    
+</body>
+</html>
