@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Navbar - flexbox</title>
+
+    <style>
+        *{
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        .container{
+            height: 800px;
+            background-color: #94A378;
+        }
+        nav{
+            height: 100px;
+            width: 100%;
+            background-color: #061E29;
+            color: white;
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .logo{
+            font-size: 32px;
+            font-weight: 700;
+            text-decoration: none;
+            color: white;
+        }
+        .services{
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            align-content: center;
+            flex-wrap: wrap;
+        }
+        button{
+            padding:5px 10px;
+            border-radius: 32px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+                <a href="#" class="logo">Amazon</a>
+                <!-- <div class="services">
+                    <div>Home</div>
+                    <div>Services</div>
+                    <div>Contact</div>
+                    <div>Menu</div>
+                </div> -->
+                <ul class="services" type="none">
+                    <li>Home</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                    <li><button>Login</button></li>
+                </ul>
+        </nav>
+    </div>
+</body>
+</html>
