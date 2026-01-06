@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+    background-color: wheat;
+}
+
+.header {
+    width: 100%;
+    min-height: 70px;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+    background-color: rgb(239, 180, 18);
+    z-index: 100;
+}
+.sort{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.select-wrap{
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+select {
+    /* appearance: none; */
+    border: none;
+    background: transparent;
+    color: blue;
+    font-size: 14px;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 30px;
+    padding: 20px;
+
+    max-width: 900px;   /* ⭐ controls excess space */
+    margin:  auto;     /* centers grid */
+    margin-top: 70px;
+}
+
+
+.item {
+    width: 100%;
+    max-width: 300px;
+    max-height: 450px;
+    border: 1px solid rgb(185, 184, 184);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    background-color: antiquewhite;
+    border-radius: 8px;
+}
+
+.marketing {
+    width: fit-content;
+    padding: 5px;
+    color: white;
+    font-weight: 700;
+    background-color: rgb(179, 22, 58);
+    border-radius: 4px;
+}
+.credits-footer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+
+.image{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+}
+.image1{
+    right: 55px;
+}
+.image2{
+    right: 40px;
+}
+.image3{
+    right: 25px;
+}
+
+.pagination{
+    min-height: 70px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 5px;
+    padding: 10px;
+}
+.pagination div{
+    height: 100%;
+    border: 1px solid blue;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    background: white;
+}
+.pagination .active{
+    background-color: aqua;
+}
