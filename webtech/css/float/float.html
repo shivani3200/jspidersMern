@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>FLoat</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .div {
+            height: 100px;
+            width: 100px;
+            background: #000;
+            color: #fff;
+        }
+
+        .float-left {
+            float: left;
+        }
+
+        .float-right {
+            float: right;
+        }
+        .clear-left{
+            clear: left;
+        }
+        .clear-right{
+            clear:right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div float-left">div1</div>
+    <h1>hello</h1>
+    <p>Lorem ipsum dolor sit, amet consect<span><b>HELLO 1</b></span>etur adipisicing elit. Inventore delectus rerum eligendi iusto soluta dolor,
+        non deserunt nesciunt aliquid unde!</p>
+
+    <div class="clear-left">
+        <div class="div float-right"> div2</div>
+        <p>Lorem ipsum dolo Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto consectetur quibusdam,
+            vero enim assumenda nemo repudiandae sint natus perspiciatis excepturi saepe ducimus laboriosam numquam
+            quasi. Laborum temporibus,<span><b>HELLO 2</b></span> id corporis reprehenderit tenetur nostrum maiores suscipit tempore quas nobis
+            soluta! Harum exercitationem sapiente reiciendis, atque illo sit ratione deserunt asperiores voluptatibus
+            perferendis.</p>
+    </div>
+    
+    <div class="clear-right">
+        <div class="div float-left"> div2</div>
+        <p>Lorem ipsum dolo Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto consectetur quibusdam,
+            vero enim assumenda nemo<span><b>HELLO 3</b></span> repudiandae sint natus perspiciatis excepturi saepe ducimus laboriosam numquam
+            quasi. Laborum temporibus, id corporis reprehenderit tenetur nostrum maiores suscipit tempore quas nobis
+            soluta! Harum exercitationem sapiente reiciendis, atque illo sit ratione deserunt asperiores voluptatibus
+            perferendis.</p>
+    </div>
+
+</body>
+
+</html>

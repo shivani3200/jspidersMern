@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function prime() {
+            let n = 13;
+            let temp = 2;
+            if (n < 2) {
+                console.log(`${n} is not prime`);
+                return;
+            }
+            while (temp <= Math.trunc(n / 2)) {
+                if (n % temp == 0) {
+                    console.log(`${n} is not prime`)
+                    return;
+                }
+                temp++;
+            }
+            console.log(`${n} is prime`);
+        }
+        prime();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

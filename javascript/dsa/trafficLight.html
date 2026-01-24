@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function trafficLight() {
+            let color = window.prompt("enter color");
+
+            // if(color === "red"){
+            //     console.log("stop")
+            // }
+            // else if(color === "yellow"){
+            //     console.log("get ready")
+            // }
+            // else if(color === "green"){
+            //     console.log("go")
+            // }
+            // else{
+            //     console.log("invalid color")
+            // }
+
+            switch (color) {
+                case "red":
+                    console.log("stop");
+                    break;
+                case "green":
+                    console.log("go");
+                    break;
+                case "yellow":
+                    console.log("get ready");
+                    break;
+                default:
+                    console.log("invalid color");
+            }
+        }
+        trafficLight();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

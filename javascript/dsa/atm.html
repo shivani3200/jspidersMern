@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function atm() {
+            let amount = Number(window.prompt("enter amount"));
+
+            if(amount<100){
+                console.log("u poor get rich")
+            }
+            let twothousand;
+            let fivehundred;
+            let twohundred;
+            let onehundred;
+
+            if(amount>=2000){
+            twothousand = Math.trunc(amount / 2000);
+            console.log(`2000*${twothousand}=${2000 * twothousand}`)
+            amount = amount % 2000;
+            }
+
+            if(amount>=500){
+            fivehundred = Math.trunc(amount / 500);
+            console.log(`500*${fivehundred}=${500 * fivehundred}`)
+            amount = amount % 500;
+            }
+
+            if(amount>=200){
+            twohundred = Math.trunc(amount / 200);
+            console.log(`200*${twohundred}=${200 * twohundred}`)
+            amount = amount % 200;
+            }
+
+            if(amount>=100){
+            onehundred = Math.trunc(amount / 100);
+            console.log(`100*${onehundred}=${100 * onehundred}`)
+            }
+
+        }
+        atm();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

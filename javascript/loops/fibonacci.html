@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // let n = 10;
+
+        // let sum = 0;
+        // let first = 0;
+        // let second = 1;
+        // console.log(first);
+        // console.log(second);
+
+        // for (let i = 2; i < n; i++) {
+        //     sum = first + second;
+        //     console.log(sum);
+        //     first = second;
+        //     second = sum;
+        // }
+
+// =-------------------print no between lower n upper limit--------------------
+        // let n = 20;
+
+        // let sum = 0;
+        // let first = 0;
+        // let second = 1;
+
+        // let lower = 5;
+        // let upper = 55;
+
+        // // console.log(first);
+        // // console.log(second);
+
+        // for (let i = 2; i < n; i++) {
+        //     sum = first + second;
+        //     if(sum>=lower && sum<=upper){
+        //          console.log(sum); 
+        //     }
+        //     first = second;
+        //     second = sum;
+        // }
+// --------------------
+//       if(lower == 0) console.log(first);
+//       if(lower ==0 || lower == 1) console.log(second)
+        // for (;true;) {
+        //     sum = first + second;
+        //     if(sum>upper)break;
+        //     if(sum>= lower) console.log(sum);
+        //     first = second;
+        //     second = sum;
+        // }
+// -----------------check if n exists in series or not-------------------------
+
+        // function fibbo() {
+        //     let n = 10;
+
+        //     let sum = 0;
+        //     let first = 0;
+        //     let second = 1;
+        //     // console.log(first);
+        //     // console.log(second);
+
+        //     for (let i = 2; i < n; i++) {
+        //         sum = first + second;
+        //         if (n == sum) {
+        //             console.log(`${n} belongs to fibbo series`)
+        //             return;
+        //         }
+        //         first = second;
+        //         second = sum;
+        //     }
+        //     console.log(`${n} do not belong to fibbo series`);
+
+        // }
+        // fibbo();
+
+// ----------print alternate -------------------
+
+        // function fibbo() {
+        //     let alternate = 10;
+
+        //     let sum = 0;
+        //     let first = 0;
+        //     let second = 1;
+
+        //     console.log(first);
+        //     // console.log(second);
+        //     let count = 1;
+        //     for (let i = 2; i < 2*alternate; i++) {
+        //         sum = first + second;
+        //         if (i%2 ==0 ) {
+        //             console.log(sum)
+        //         }
+        //         first = second;
+        //         second = sum;
+        //     }
+        // }
+        // fibbo();
+
+        function fibbo() {
+            let alternate = 10;
+
+            let sum = 0;
+            let first = 0;
+            let second = 1;
+            let temp = true;
+
+            console.log(first);
+            // console.log(second);
+            let count = 1;
+            for (let i = 2; i < 2*alternate; i++) {
+                sum = first + second;
+                if (temp == true ) {
+                    console.log(sum);
+                    temp = false;
+                }
+                else{
+                    temp = true;
+                }
+                first = second;
+                second = sum;
+            }
+        }
+        fibbo();
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

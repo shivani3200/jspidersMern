@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function bill() {
+            let units = Number(window.prompt("enter units"));
+            let bill;
+
+            if (units <= 200) {
+                bill = 200 * 0;
+                console.log(`unit is ${units}, bill is ${bill}`)
+            }
+            else if (units > 200 && units <=250) {
+                bill = (200 * 0)+(units-200)*3;
+                console.log(`unit is ${units}, bill is ${bill}`)
+            }
+            else if (units > 250 && units <=300) {
+                bill = (200 * 0)+(50*3) +(units-250)*5;
+                console.log(`unit is ${units}, bill is ${bill}`)
+            }
+            else if (units >300) {
+                bill = (200 * 0)+(50*3) +(50*5)+(units-300)*7;
+                console.log(`unit is ${units}, bill is ${bill}`)
+            }
+        }
+        bill();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

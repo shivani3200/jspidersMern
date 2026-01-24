@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        let opin = 12345;
+
+        function pinCorrectOrNot(opin) {
+            let npin = Number(window.prompt("enter pin"));
+
+            if (npin === opin) return true;
+            return false;
+        }
+
+        let ans = pinCorrectOrNot(opin);
+
+        console.log(ans ? "entered pin is correct" : "entered pin is diferent");
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
