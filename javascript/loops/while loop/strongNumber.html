@@ -8,24 +8,26 @@
     <script>
         function factorial(n) {
             let fact = 1;
-            while (n >= 0) {
+            while (n >= 1) {
                 fact = fact * n;
                 n--;
             }
             return fact;
         }
 
-        let n = 145;
+        let n = 28;
         let sum = 0;
         let temp = n;
 
-        function strong(temp) {
+        while (temp>0) {
+
             let rem = temp % 10;
             let fact = factorial(rem);
             sum = sum + fact;
             temp = Math.trunc(temp / 10);
         }
-        let ans = strong(n);
+
+
         if (sum == n) {
             console.log(`${n} is a strong no.`)
         }
