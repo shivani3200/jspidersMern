@@ -18,7 +18,7 @@ body{
   width: 90%;
   max-width: 470px;
   padding: 40px 35px;
-  margin: 100px auto 0;
+  margin: 100px auto;
   color: #fff;
   background: linear-gradient(135deg,#00feba, #5b548a);
   border-radius: 20px;
@@ -76,9 +76,31 @@ body{
   width: 170px;
   height: 100px;
 } */
-.weather img {
+.weather-icon-container {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Perspective is key for the 3D look */
+  perspective: 1000px; 
+}
+
+.weather-icon {
   width: 200px;
-  margin-top: 30px;
+  z-index: 2;
+  transition: transform 0.1s ease-out, filter 0.1s ease-out;
+  transform-style: preserve-3d;
+  will-change: transform;
+  /* Natural float animation */
+  animation: floatIcon 4s ease-in-out infinite;
+}
+
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(1.5deg); }
 }
 .weather h1{
 font-size: 80px;
