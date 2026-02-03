@@ -1,5 +1,5 @@
 let s2 = {
-
+  
   sid:110,
   sname:"shivani",
   birthyear:2000,
