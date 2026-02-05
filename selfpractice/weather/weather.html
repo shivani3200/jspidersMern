@@ -28,21 +28,6 @@
   
   <h1 class="temp">25°C</h1>
   <h2 class="city">City Name</h2>
-
-      <!-- <div  class="details">
-        <div class="col">
-          <img src="humidityicon.png" alt="Humidity Icon">
-          <p class="humidity">60%</p>
-          <p>humidity</p>
-        </div>
-        <div class="col">
-          <img src="windyicon.png" alt="Wind Icon">
-          <p class="wind">15 km/h</p>
-          <p>wind speed</p>
-        </div>
-
-      </div> -->
-    
       <div class="details">
         <div class="col">
           <img src="humidityicon.png" alt="Humidity Icon">
@@ -61,6 +46,50 @@
       </div>
     </div>
   </div>
+
+  <script>
+    const apiKey = 'e7334a135b825a887907f46571fc9b4f';
+    const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric";
+
+    const searchBox = document.querySelector(".search input");
+    const searchBtn = document.querySelector(".search button");
+
+    async function fetchWeather(city) {
+      const response = await fetch(`${apiUrl}&appid=${apiKey}&q=${city}`);
+      const data = await response.json();
+      console.log(data);
+      
+      document.querySelector(".city").innerHTML = data.name;
+      document.querySelector(".temp").innerHTML = `${Math.round(data.main.temp)}°C`;
+      document.querySelector(".humidity").innerHTML = `${data.main.humidity}%`;
+      document.querySelector(".wind").innerHTML = `${data.wind.speed} km/h`;
+
+      if (data.weather[0].main === "Clouds") {
+        document.querySelector(".weather-icon").src = "cloudyicon.png";
+      } else if (data.weather[0].main === "Clear") {
+        document.querySelector(".weather-icon").src = "sunnyicon.png";
+      } else if (data.weather[0].main === "Rain") {
+        document.querySelector(".weather-icon").src = "rainyicon.png";
+      } else if (data.weather[0].main === "Snow") {
+        document.querySelector(".weather-icon").src = "snowyicon.png";
+      } else {
+        document.querySelector(".weather-icon").src = "weathericon.png";
+      }
+
+      document.querySelector(".weather").style.display = "block";
+    }
+
+    searchBtn.addEventListener("click", () => {
+      fetchWeather(searchBox.value);
+    });
+    
+    searchBox.addEventListener("keypress", (event) => {
+      if (event.key === "Enter") {
+        fetchWeather(searchBox.value);
+      }
+    });
+    
+  </script>
 </body>
 
 </html>
