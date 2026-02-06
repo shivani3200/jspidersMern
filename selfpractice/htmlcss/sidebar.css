@@ -10,7 +10,7 @@
     height: 100vh;
     width: 100%;
     background-size: cover;
-    background: url('logo.png') right no-repeat;
+    background: url('../../images/logo.png') right no-repeat;
 }
 
 .main-box .sidebar_menu{

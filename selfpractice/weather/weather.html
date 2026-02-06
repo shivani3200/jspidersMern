@@ -15,7 +15,7 @@
     <!-- search -->
     <div class="search">
     <input type="text" id="cityInput" placeholder="enter city name" spellcheck="false">
-    <button class="searchBtn"><img src="searchicon.png" alt="Search"></button>
+    <button class="searchBtn"><img src="../../images/searchicon.png" alt="Search"></button>
     </div>
 
 
@@ -23,21 +23,21 @@
      <div class="weather">
   <div class="weather-icon-container">
     <div class="glow-layer"></div>
-    <img src="weathericon.png" alt="Weather Icon" class="weather-icon">
+    <img src="../../images/weathericon.png" alt="Weather Icon" class="weather-icon">
   </div>
   
   <h1 class="temp">25°C</h1>
   <h2 class="city">City Name</h2>
       <div class="details">
         <div class="col">
-          <img src="humidityicon.png" alt="Humidity Icon">
+          <img src="../../images/humidityicon.png" alt="Humidity Icon">
           <div class="row">
             <div class="humidity">50%</div>
             <div>humidity</div> 
           </div>
         </div>
         <div class="col">
-          <img src="windyicon.png" alt="Wind Icon">
+          <img src="../../images/windyicon.png" alt="Wind Icon">
           <div class="row">
             <div class="wind">15 km/h</div>
             <div>wind speed</div>
@@ -65,15 +65,15 @@
       document.querySelector(".wind").innerHTML = `${data.wind.speed} km/h`;
 
       if (data.weather[0].main === "Clouds") {
-        document.querySelector(".weather-icon").src = "cloudyicon.png";
+        document.querySelector(".weather-icon").src = "../../images/cloudyicon.png";
       } else if (data.weather[0].main === "Clear") {
-        document.querySelector(".weather-icon").src = "sunnyicon.png";
+        document.querySelector(".weather-icon").src = "../../images/sunnyicon.png";
       } else if (data.weather[0].main === "Rain") {
-        document.querySelector(".weather-icon").src = "rainyicon.png";
+        document.querySelector(".weather-icon").src = "../../images/rainyicon.png";
       } else if (data.weather[0].main === "Snow") {
-        document.querySelector(".weather-icon").src = "snowyicon.png";
+        document.querySelector(".weather-icon").src = "../../images/snowyicon.png";
       } else {
-        document.querySelector(".weather-icon").src = "weathericon.png";
+        document.querySelector(".weather-icon").src = "../../images/weathericon.png";
       }
 
       document.querySelector(".weather").style.display = "block";
@@ -88,7 +88,7 @@
         fetchWeather(searchBox.value);
       }
     });
-    
+
   </script>
 </body>
 
