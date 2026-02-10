@@ -3,12 +3,16 @@
 class Demo{
 
   static n = 1; //static variable
+  c = 9;
 
   static main(){
     let n   = 20;//local variable
     console.log("static method");
     console.log(Demo.n);
     Demo.greet();
+
+    let f1 = new Demo();
+    console.log(f1.c);
   }
 
   greet(){
