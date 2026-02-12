@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="navbar bg-dark navbar-dark ">
+    <div class="container-fluid">
+      <a href="#" class="navbar-brand">DOM</a>
+    </div>
+  </nav>
+
+  <div class=" row mt-5 container m-auto border border-2 border-dark p-4 rounded-4">
+    <h1 class="text-center mt-3">Counter</h1>
+    <div class="d-flex justify-content-center mt-3">
+      <button class="btn btn-primary" id="decrement" onclick="decrement()">-</button>
+        <h2 class="mx-4" id="counterValue" onclick="counterValue()">0</h2>
+      <button class="btn btn-primary" id="increment" onclick="increment()">+</button>
+    </div>
+  </div>
+
+<script>
+
+  //using get element by id
+  const decrementBtn = document.getElementById('decrement');
+  const incrementBtn = document.getElementById('increment');
+  const counterValue = document.getElementById('counterValue');
+
+  let count = 0;
+
+
+  function updateCounter() {
+    counterValue.textContent = count;
+  }
+  function decrement(){
+    count--;
+    if(count <0 ) count = 0;
+    updateCounter();
+  }
+
+  function increment(){
+    count++;
+    updateCounter();
+  }
+
+
+  //using event listener
+  
+  // decrementBtn.addEventListener('click', () => {
+  //   count--;
+  //   if(count <0 ) count = 0;
+  //   counterValue.textContent = count;
+  // });
+
+  // incrementBtn.addEventListener('click', () => {
+  //   count++;
+  //   counterValue.textContent = count;
+  // });
+</script>
+
+</body>
+
+</html>

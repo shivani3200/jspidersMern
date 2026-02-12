@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+<body>
+  <h1 id="header">DOM Manipulation</h1>
+  <button onClick="changeText()"> click</button>
+
+
+  <script>
+    let h1tag = document.getElementById("header");//return the element which has id header
+    console.log(h1tag);
+
+
+    //the textContent property is used to get or set the text content of an element
+    console.log(h1tag.textContent);// it will return the text content of h1 tag
+    h1tag.textContent = "DOM Manipulation with JavaScript";// it will change the text content of h1 tag to "DOM Manipulation with JavaScript"
+
+
+    function changeText(){
+      h1tag.textContent = "Text changed by button click";
+    }
+    
+  </script>
+</body>
+</html>
