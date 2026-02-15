@@ -8,7 +8,7 @@ let m2 = {
 }
 
 function Book(sname,seatNo){
-  console.log(`hey ${sname} ! you ticket for mfovie ${this.mname} has been confirmed with seat no = ${seatNo}`);
+  console.log(`hey ${sname} ! you ticket for movie ${this.mname} has been confirmed with seat no = ${seatNo}`);
 }
 Book.call(m1,"justin","H12")
 
