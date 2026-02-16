@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h1>Amazon</h1>
+
+  <p>
+    shop in
+    <span style="display: none;">Amazon </span> -----hurry !!!!
+
+    innerText and textContent are used to get the text content of an element, but they behave differently when it comes to hidden elements. innerText will not include the text of hidden elements, while textContent will include it. innerHTML is used to get or set the HTML content of an element.
+
+    innerHTML is used to get or set the HTML content of an element. When you set innerHTML, it parses the string as HTML and updates the DOM accordingly. When you get innerHTML, it returns the HTML content of the element as a string, including any nested elements and their attributes.
+
+    
+  </p>
+
+<!-- innerText and textContent are used to get the text content of an element, but they behave differently when it comes to hidden elements. innerText will not include the text of hidden elements, while textContent will include it. innerHTML is used to get or set the HTML content of an element. -->
+  <div id="shout">
+    shout out loud
+  </div>
+
+
+  <script>
+    let pTag = document.querySelector('p');
+    console.log(pTag.textContent);
+    console.log(pTag.innerText);
+    console.log(pTag.innerhtml);
+
+
+    let divTag = document.getElementById('shout');
+    let str = "<h1>Shout shout shout n scream</h1>";
+
+    // divTag.textContent = str;
+    // divTag.innerText = str;
+    divTag.innerHTML = str;
+
+
+
+  </script>
+</body>
+
+</html>

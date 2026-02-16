@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>query selector </title>
+</head>
+
+<body>
+
+  <h1> Jspiders Institute</h1>
+
+  <div>
+    <h2>Software Courses</h2>
+
+    <ol>
+      <li>MERN</li>
+      <li id="java">JAVA</li>
+      <li>PYTHON</li>
+      <li>DEVOPS</li>
+    </ol>
+
+  </div>
+
+
+  <script>
+    let liTag = document.querySelector("li");//selects the 1st li tag
+    console.log(liTag);
+    console.log(liTag.textContent);
+
+
+    let liTag2 = document.querySelectorAll("li");// selects all the li tags and returns a node list
+    console.log(liTag2);
+    console.log(liTag2.textContent);
+
+
+    let liTag3 = document.querySelector('#java');// selects the element with id java
+    console.log(liTag3);
+    console.log(liTag3.textContent);
+
+  </script>
+
+</body>
+
+</html>
