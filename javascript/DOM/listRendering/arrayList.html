@@ -8,20 +8,22 @@
 <body>
 
   <h1>Fruits List</h1>
-  <ol id="fruitList"></ol>
+  <div id="fruitList"></div>
   
 </body>
 
 
 <script>
   let fruits = ["apple", "banana", "orange", "grape", "mango"];
-  let fruitList = document.getElementById("fruitList");
   
-  for (let i = 0; i < fruits.length; i++) {
-    let li = document.createElement("li");
-    li.textContent = fruits[i];
-    fruitList.appendChild(li);
-  }
-
+  let str = "<ol>";
+    for(let i= 0; i<fruits.length; i++){
+      str = str + `<li>${fruits[i]}</li>`;
+    }
+    
+    str =str + "<ol>";
+      
+      let fruitList = document.getElementById("fruitList");
+      fruitList.innerHTML= str;
 </script>
 </html>
