@@ -32,8 +32,12 @@
   const incrementBtn = document.getElementById('increment');
   const counterValue = document.getElementById('counterValue');
 
-  let count = 0;
 
+let c = localStorage.getItem("count")?localStorage.getItem("count"):0;
+
+counterValue.textContent = c;
+  let count =  0;
+  
 
   function updateCounter() {
     counterValue.textContent = count;
@@ -62,7 +66,7 @@
   //   count++;
   //   counterValue.textContent = count;
   // });
-  
+
 </script>
 
 </body>

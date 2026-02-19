@@ -25,8 +25,8 @@ let htmlSnippet = `<div class="col-8 m-auto">
               <div class="col-8 p-3">
                 <h3>${item.title}</h3>
                 <h6>${item.description}</h6>
-                <h5>⭐️${item.rating.rate} (242)</h5>
-                <h6>₹${item.price}</h6>
+                <h5>⭐️${item.rating.rate} (${item.rating.count})</h5>
+                <h6>＄${item.price}</h6>
               </div>
             </div>
           </div>
