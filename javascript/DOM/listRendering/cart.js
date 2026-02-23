@@ -117,17 +117,12 @@ function incQty(id){
 }
 
 function decQty(id){
-  let newArr = [];
-  for(let item of itemsArray){
-    if(item.id === id){
-      let newObj = {...item, qty:--item.qty}
-      newArr.push(newObj);
-    }
-    else{
-        newArr.push(item);
-    }
-  }
-    itemsArray= newArr;
-    displayItems(itemsArray);
+
+let newArray = itemsArray.map(item =>{
+
+   if(item.id === id) return {...item, qty:(item.qty)<0?0:--item.qty}
+    else return item
+  }) 
+    displayItems(newArray);
 }
 
