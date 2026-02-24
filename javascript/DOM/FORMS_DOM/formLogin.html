@@ -24,9 +24,9 @@
         </div>
         <div class="card-body">
           <!-- form -->
-          <form id  ="login-form">
+          <form id="login-form">
             <div class="mb-2">
-              <input type="text" placeholder="username" class="form-control" id="usn-box" >
+              <input type="text" placeholder="username" class="form-control" id="usn-box">
             </div>
             <div class="mb-4">
               <input type="password" placeholder="password" class="form-control" id="pwd-box">
@@ -34,33 +34,34 @@
             <input type="submit" class="bg-dark text-white btn btn" />
           </form>
         </div>
-       
+
       </div>
     </div>
   </div>
 
-    <script>
-      let usnElement = document.getElementById('usn-box');
-      let pwdElement = document.getElementById('pwd-box');
-      let loginFormElement = document.getElementById('login-form');
+  <script>
+    let usnElement = document.getElementById('usn-box');
+    let pwdElement = document.getElementById('pwd-box');
+    let loginFormElement = document.getElementById('login-form');
 
 
-      loginFormElement.addEventListener('submit', function(e){
+    loginFormElement.addEventListener('submit', function (e) {
 
-        e.preventDefault();
-        let usn = usnElement.value;
-        let pwd = pwdElement.value;
+      e.preventDefault();
+      let usn = usnElement.value;
+      let pwd = pwdElement.value;
 
-        let userInfo={
-          username : usn,
-          password : pwd
-        }
-        console.log(userInfo)
-                  usnElement.value="";
-                  pwdElement.value="";
+      let userInfo = {
+        username: usn,
+        password: pwd
+      }
+      console.log(userInfo)
+      usnElement.value = "";
+      pwdElement.value = "";
 
-      })
-    </script>
+    })
+  </script>
 
 </body>
+
 </html>
