@@ -1,11 +1,35 @@
-let listItems = [
-  { id: 1, itemName: "lappy" },
+// let listItems = [
+//   { id: 1, itemName: "lappy" },
+  
+//   { id: 2, itemName: "happy" },
+  
+//   { id: 3, itemName: "gappy" },
+// ];
 
-  { id: 2, itemName: "happy" },
+let listItems = localStorage.getItem('items')?JSON.parse(localStorage.getItem('items')):[];
 
-  { id: 3, itemName: "gappy" },
-];
+let taskFormElement = document.getElementById("task-form");
+let inputElement = document.getElementById("input-box");
+// let itemListElement = document.getElementById('items-list');
 
+
+//update element
+
+function updateItem(id){
+  for(let item of listItems){
+    if(item.id == id){
+      
+      let index = listItems.indexOf(item);
+      listItems.splice(index,1);
+      
+      inputElement.value = item.itemName;
+
+      localStorage.setItem('items',JSON.stringify(listItems));
+      displayItems(listItems)
+    }
+  }
+  
+}
 // delete elements
 function deleteItem(id) {
   for (let item of listItems) {
@@ -13,6 +37,8 @@ function deleteItem(id) {
       console.log(id);
       let index = listItems.indexOf(item);
       listItems.splice(index, 1);
+      localStorage.setItem('items',JSON.stringify(listItems));
+
       displayItems(listItems);
     }
   }
@@ -20,9 +46,6 @@ function deleteItem(id) {
 
 // create elements
 
-let taskFormElement = document.getElementById("task-form");
-let inputElement = document.getElementById("input-box");
-// let itemListElement = document.getElementById('items-list');
 
 taskFormElement.addEventListener("submit", function (e) {
 
@@ -33,6 +56,7 @@ taskFormElement.addEventListener("submit", function (e) {
   let newItem = { id: Math.trunc(Math.random() * 100), itemName: itemName };
   listItems.unshift(newItem);
   inputElement.value = "";
+      localStorage.setItem('items',JSON.stringify(listItems));
 
   displayItems(listItems);
 });
@@ -48,7 +72,8 @@ function displayItems(items) {
   items.forEach((item) => {
     eachItem += `<li class=" list-group-item list-group-item-dark mb-1 d-flex justify-between ">
                 <span>${item.itemName}</span>
-                <span class="btn" onclick="deleteItem(${item.id})">❌</span>
+                <span class="btn float-end me-2" onclick="updateItem(${item.id})">✍🏻</span>
+                <span class="btn float-end " onclick="deleteItem(${item.id})">❌</span>
               </li>`;
   });
   document.querySelector("#items-list").innerHTML = eachItem;
