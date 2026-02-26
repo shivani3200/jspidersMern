@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Multi Product</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a href="#" class="navbar-brand">DOM</a>
+    </div>
+  </nav>
+
+  <div class="container-fluid mt-4">
+    <div class="row p-2 m-2" id="container">
+        <div class="col" >
+            <h1 align="center">hello attribute method</h1>
+        </div>
+      
+    </div>
+  </div>
+  <script>
+    let h1Tag = document.querySelector('h1');
+
+    let val = h1Tag.getAttribute('align');
+    console.log(val);
+
+    h1Tag.setAttribute('id','one');
+    console.log(h1Tag);
+
+    let flag = h1Tag.hasAttribute('align');
+    console.log(flag);
+
+    h1Tag.removeAttribute('id');
+    console.log(h1Tag);
+
+  </script>
+
+</body>
+
+</html>
