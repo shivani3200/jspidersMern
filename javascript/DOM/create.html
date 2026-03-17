@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let h1Tag = document.createElement('hi');
+        h1Tag.textContent = 'hello';
+        document.body.appendChild(h1Tag);
+
+        let ulTag = document.createElement('ul');
+        let liTag1 = document.createElement('li');
+        let liTag2 = document.createElement('li');
+
+        liTag1.textContent ='list1';
+        liTag1.textContent ='list1';
+        document.body.appendChild(ulTag);
+        document.body.appendChild(h1Tag);
+    </script>
+</body>
+</html>

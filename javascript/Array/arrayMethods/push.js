@@ -10,3 +10,5 @@ console.log(names);
 let val = names.push("e");//returns new length
 
 console.log(val); 
+console.log(names);
+

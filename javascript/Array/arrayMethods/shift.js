@@ -5,7 +5,7 @@ console.log(names);
 
 
 
-let val = names.shift("z");//
+let val = names.shift();// deletes 1st element, returns deleted element
 
 console.log(val); 
 console.log(names);

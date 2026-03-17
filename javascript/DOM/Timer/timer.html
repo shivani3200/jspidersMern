@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h2 id="display">00:00:00:</h2>
+    <button onclick="start()">start</button>
+    <button onclick="stop()">stop</button>
+    <button onclick="reset()">reset</button>
+
+    <script>
+      let seconds = 0;
+      let minutes = 0;
+      let hours = 0;
+      let timer = null;
+
+      function updateDisplay() {
+        let h = hours < 10 ? "0" + hours : hours;
+        let m = minutes < 10 ? "0" + minutes : minutes;
+        let s = seconds < 10 ? "0" + seconds : seconds;
+
+        document.getElementById("display").innerHTML = h + ":" + m + ":" + s;
+      }
+      function start() {
+        if (timer != null) return;
+
+       timer =  setInterval(() => {
+          seconds++;
+
+          if (seconds == 60) {
+            seconds = 0;
+            minute++;
+          }
+          if (minutes == 60) {
+            minutes = 0;
+            hour++;
+          }
+
+          updateDisplay();
+        }, 1000);
+      }
+
+      function stop() {
+        clearInterval(timer);
+        timer = null;
+      }
+
+      function reset() {
+        stop();
+        seconds = 0;
+        minutes = 0;
+        hours = 0;
+        updateDisplay();
+      }
+    </script>
+  </body>
+</html>

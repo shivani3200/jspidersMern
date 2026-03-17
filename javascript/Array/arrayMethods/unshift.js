@@ -5,7 +5,7 @@ console.log(names);
 
 
 
-let val = names.unshift("z");//
+let val = names.unshift("z");//add at first,returns new length
 
 console.log(val); 
 console.log(names);

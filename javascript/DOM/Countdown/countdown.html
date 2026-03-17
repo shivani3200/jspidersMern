@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>countdown</title>
+</head>
+<body>
+
+    <h2 id ="display">00:00:00</h2>
+    <button onclick="start()">start</button>
+    <button onclick="stop()">stop</button>
+
+
+
+    <script>
+
+        let timer = null;
+
+        functionDisplay(){
+
+            let h = 0;
+            let m = 0;
+            let s = 0;
+            
+
+
+            document.getElementById("display").innerHTML=h+":"+m+":"+s;
+
+        }
+        function start(){
+            timer = setInterval(()=>{
+
+                if(timer != null) return;
+
+                hours--;
+                if(hours == 0){
+                    minutes = 60;
+                    minutes--;
+                }
+                if(minutes == 0){
+                    minutes = 0;
+                    seconds=60;
+                    seconds--;
+                }
+
+                if(seconds =0){
+                    clearInterval(timer);
+                }
+
+            },1000);
+
+        }
+        function stop(){
+            clearInterval(timer);
+            timer = null;
+
+        }
+        function reset(){
+            stop();
+            functionDisplay();
+
+        }
+
+    </script>
+    
+</body>
+</html>

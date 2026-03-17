@@ -84,9 +84,9 @@ function displayItems(products) {
               </span>
             </div>
               <h6>＄${item.price}</h6>
-            <button class="btn btn-light" onclick="decQty(${item.id})">⊖</button>
+            <button class="btn btn-light" onclick="decQty(${item.id})">-</button>
             <span>${item.qty}</span>
-            <button class="btn btn-light" onclick="incQty(${item.id})">⊕</button>
+            <button class="btn btn-light" onclick="incQty(${item.id})">+</button>
           </div>
         </div>
       </div>`;
@@ -120,7 +120,7 @@ function decQty(id){
 
 let newArray = itemsArray.map(item =>{
 
-   if(item.id === id) return {...item, qty:(item.qty)<0?0:--item.qty}
+   if(item.id === id) return {...item, qty:(item.qty)<1?0:--item.qty}
     else return item
   }) 
     displayItems(newArray);
