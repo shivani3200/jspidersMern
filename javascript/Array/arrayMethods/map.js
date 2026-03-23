@@ -1,7 +1,8 @@
 let sname = ['a','b','c','d','e'];
 
 
-let arr = sname.map(function(name){
+let arr = sname.map(function(name,i,snameRef){
+  console.log(name,i,snameRef)
   return name+1;
 })
 
