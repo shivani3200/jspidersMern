@@ -1,0 +1,1 @@
+console.log(" multiple inheritance is not possible ")

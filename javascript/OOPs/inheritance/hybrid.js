@@ -1,0 +1,1 @@
+console.log(" hybrid inheritance is not possible ")
