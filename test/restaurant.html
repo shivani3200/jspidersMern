@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant</title>
+    <style>
+      .container {
+        background-color: lightcoral;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding: 50px;
+        margin: 50px;
+      }
+      .input {
+        padding: 10px 10px;
+        margin: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <div class="">
+          <form id="regForm">
+            <input
+              type="text"
+              placeholder="enter name"
+              id="name"
+              class="input"
+            />
+            <input
+              type="number"
+              name="price"
+              placeholder="enter price"
+              id="price"
+              class="input"
+            />
+
+            <select name="category" id="category" class="input">
+              <option value="">--choose catetory--</option>
+              <option value="Veg">Veg</option>
+              <option value="nonVeg">non veg</option>
+            </select>
+
+            <button type="submit" class="input">Add</button>
+          </form>
+        </div>
+        <div>
+          <div>
+            <h1>Veg</h1>
+            <ul id="display-veg"></ul>
+          </div>
+          <div>
+            <h1>non-veg</h1>
+            <ul id="display-nonveg"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let formElement = document.getElementById("regForm");
+      let nameElement = document.getElementById("name");
+      let priceElement = document.getElementById("price");
+      let categoryElement = document.getElementById("category");
+
+      let displayveg = document.getElementById("display-veg");
+      let displaynonveg = document.getElementById("display-nonveg");
+
+      let renderlist = localStorage.getItem("renderlist")
+        ? JSON.parse(localStorage.getItem("renderlist"))
+        : [];
+      // let renderlist =[];
+
+      formElement.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        let name = nameElement.value.trim();
+        let category = categoryElement.value;
+        let price = Number(priceElement.value);
+
+        if (name.length <= 0 || price <= 0 || category == null) {
+            alert("add name, price & category")
+          return;
+        }
+        let obj = { name, category, price };
+
+        if (renderlist.find((item) => item.name === obj.name)) {
+          alert("item is already added");
+          return;
+        } else {
+          renderlist.push(obj);
+          localStorage.setItem("renderlist", JSON.stringify(renderlist));
+        }
+
+        console.log(renderlist);
+
+        if (category == "Veg") {
+          let li = document.createElement("li");
+          li.textContent = `${name} - ${price}`;
+          displayveg.appendChild(li);
+        } else {
+          let li = document.createElement("li");
+          li.textContent = `${name} - ${price}`;
+          displaynonveg.appendChild(li);
+        }
+
+        name.value = "";
+        category.value = "";
+        price.value = "";
+      });
+    </script>
+  </body>
+</html>

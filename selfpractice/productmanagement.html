@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <form id="regForm">
+
+        <input type="text" placeholder="product name" id="name-box" />
+        <span id="errorName"></span>
+
+        <select name="category" id="category">
+          <option value="">--catetory--</option>
+          <option value="electronics">Electronics</option>
+          <option value="clothing">clothing</option>
+          <option value="grocery">grocery</option>
+        </select>
+
+        <input type="number" name="price" id="price" />
+        <span id="errorPrice"></span>
+
+        <input type="number" name="qty" id="qty" />
+        <span id="errorQty"></span>
+
+        <button type="submit"> submit </button>
+      </form>
+
+    </div>
+    <div id="display">
+      <div id="search"></div>
+      <div id="sort"></div>
+      <table>
+        <thead>
+          <th>product name</th>
+          <th>category</th>
+          <th>price</th>
+          <th>quantity</th>
+          <th>action</th>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+
+    <script>
+      let formElement = document.getElementById("regForm").value.trim();
+      let name = document.getElementById("name-box").value;
+      let price = document.getElementById("price").value;
+      let qty = document.getElementById("qty").value;
+
+      //error
+      let errorName = getElementById('errorName');
+      let errorPrice = getElementById('errorPrice');
+      let errorQty = getElementById('errorQty');
+      let tbody = getElementById('tbody')
+
+
+      formElement.addEventListener('submit', function(e){
+
+        e.preventDefault();
+
+        let isValid = true;
+
+        if(name.length<3){
+            errorName.textContent = 'name must be altleast 3 char'
+            isValid = false;
+        }
+        if(price <1){
+            errorPrice.textContent ='price msut be greater than 0'
+            isValid = false;
+        }
+        if(qty <0){
+            qty.textContent ='qty msut be 0 or greater'
+            isValid = false;
+        }
+
+        if(isValid){
+            let tr = createElement('tr')
+            tr.innerHTML=`
+            <tr>${name}</tr>
+            <tr>${category}</tr>
+            <tr>${price}</tr>
+            <tr>${qty}</tr>
+            <tr>${remove}</tr>
+            `
+        }
+
+        if(price>1000){
+            tr.setAttribute('class','bg-warning')
+        }
+        else{
+            tr.setAttribute('class','bg-success')
+        }
+        
+        button.addEventListener('click',function(){
+            tr.remove();
+        })
+
+
+
+      })
+      
+    </script>
+  </body>
+</html>
