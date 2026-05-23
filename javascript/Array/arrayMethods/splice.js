@@ -20,9 +20,13 @@ let a = [11,12,13,14,15];
 // let b = a.splice(1,100);// remove 1st element only
 // let b = a.splice(1,0,100,200,300);// remove nothing element, add 100 200 300 from index 1
 // let b = a.splice(2,0,"hello");// remove nothing element
-let b = a.splice(2,1,"hello");// remove one element i.e. 2nd, and add hello at 2nd index
+// let b = a.splice(2,1,"hello");// remove one element i.e. 2nd, and add hello at 2nd index
+// let b = a.splice(0);// removes all elements from the array
+// let b = a.splice(-1);// removes last element from the array
+// let b = a.splice(0,1);// removes first element from the array
+let b = a.splice(2,-1,"hello");// remove nothing element
 
 
-console.log(a)
-console.log(b)
+console.log("a: ", a);
+console.log("b: ", b);
 
