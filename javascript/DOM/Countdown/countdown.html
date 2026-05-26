@@ -14,37 +14,28 @@
 
 
     <script>
-
         let timer = null;
-
-        functionDisplay(){
-
+        functionDisplay=()=>{
             let h = 0;
             let m = 0;
             let s = 0;
-            
-
-
             document.getElementById("display").innerHTML=h+":"+m+":"+s;
-
         }
+
         function start(){
             timer = setInterval(()=>{
-
                 if(timer != null) return;
-
                 hours--;
                 if(hours == 0){
                     minutes = 60;
                     minutes--;
                 }
                 if(minutes == 0){
-                    minutes = 0;
+                    // minutes = 0;
                     seconds=60;
                     seconds--;
                 }
-
-                if(seconds =0){
+                if(seconds ==0){
                     clearInterval(timer);
                 }
 
@@ -59,7 +50,6 @@
         function reset(){
             stop();
             functionDisplay();
-
         }
 
     </script>
