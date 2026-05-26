@@ -22,38 +22,45 @@
   <body>
     <div class="container">
       <div>
-        <div class="">
-          <form id="regForm">
-            <input
-              type="text"
-              placeholder="enter name"
-              id="name"
-              class="input"
-            />
-            <input
-              type="number"
-              name="price"
-              placeholder="enter price"
-              id="price"
-              class="input"
-            />
+        <form id="regForm">
+          <input
+            type="text"
+            placeholder="enter name"
+            id="name"
+            class="input"
+          />
 
-            <select name="category" id="category" class="input">
-              <option value="">--choose catetory--</option>
-              <option value="Veg">Veg</option>
-              <option value="nonVeg">non veg</option>
-            </select>
+          <input
+            type="number"
+            name="price"
+            placeholder="enter price"
+            id="price"
+            class="input"
+          />
 
-            <button type="submit" class="input">Add</button>
-          </form>
-        </div>
+          <select name="category" id="category" class="input">
+            <option value="">--choose category--</option>
+            <option value="Veg">Veg</option>
+            <option value="nonVeg">Non Veg</option>
+          </select>
+
+          <!-- Checkbox Added -->
+          <label class="input">
+            <input type="checkbox" id="available" />
+            Available
+          </label>
+
+          <button type="submit" class="input">Add</button>
+        </form>
+
         <div>
           <div>
             <h1>Veg</h1>
             <ul id="display-veg"></ul>
           </div>
+
           <div>
-            <h1>non-veg</h1>
+            <h1>Non-Veg</h1>
             <ul id="display-nonveg"></ul>
           </div>
         </div>
@@ -65,6 +72,7 @@
       let nameElement = document.getElementById("name");
       let priceElement = document.getElementById("price");
       let categoryElement = document.getElementById("category");
+      let availableElement = document.getElementById("available");
 
       let displayveg = document.getElementById("display-veg");
       let displaynonveg = document.getElementById("display-nonveg");
@@ -72,7 +80,6 @@
       let renderlist = localStorage.getItem("renderlist")
         ? JSON.parse(localStorage.getItem("renderlist"))
         : [];
-      // let renderlist =[];
 
       formElement.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -80,36 +87,39 @@
         let name = nameElement.value.trim();
         let category = categoryElement.value;
         let price = Number(priceElement.value);
+        let available = availableElement.checked;
 
-        if (name.length <= 0 || price <= 0 || category == null) {
-            alert("add name, price & category")
+        if (name.length <= 0 || price <= 0 || category === "") {
+          alert("Add name, price & category");
           return;
         }
-        let obj = { name, category, price };
+
+        let obj = { name, category, price, available };
 
         if (renderlist.find((item) => item.name === obj.name)) {
-          alert("item is already added");
+          alert("Item already added");
           return;
-        } else {
-          renderlist.push(obj);
-          localStorage.setItem("renderlist", JSON.stringify(renderlist));
         }
 
-        console.log(renderlist);
+        renderlist.push(obj);
+        localStorage.setItem("renderlist", JSON.stringify(renderlist));
 
-        if (category == "Veg") {
-          let li = document.createElement("li");
-          li.textContent = `${name} - ${price}`;
+        let li = document.createElement("li");
+        li.textContent = `Name: ${name}, Price: ${price}, Available: ${
+          available ? "Yes" : "No"
+        }`;
+
+        if (category === "Veg") {
           displayveg.appendChild(li);
         } else {
-          let li = document.createElement("li");
-          li.textContent = `${name} - ${price}`;
           displaynonveg.appendChild(li);
         }
 
-        name.value = "";
-        category.value = "";
-        price.value = "";
+        // Reset
+        nameElement.value = "";
+        categoryElement.value = "";
+        priceElement.value = "";
+        availableElement.checked = false;
       });
     </script>
   </body>

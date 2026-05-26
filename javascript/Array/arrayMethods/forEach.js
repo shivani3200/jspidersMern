@@ -39,9 +39,11 @@ let sum = 0
 array.forEach(function(ele,index,arrRef){
   console.log(ele, index, arrRef)
   sum = sum+ele;
+  arrRef[index] = ele*2;
 
 })
 
 console.log(sum)
+console.log(array)
 
 
