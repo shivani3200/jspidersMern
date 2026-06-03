@@ -1,62 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
+  <body>
+    <h1>Event Handling</h1>
 
-<body>
+    <!-- men shop button -->
+    <button onclick="menShop()">click here</button>
 
-  <h1>Event Handling</h1>
+    <!-- sports shop button -->
+    <button id="sports">click here</button>
 
-  <!-- men shop button -->
-  <button onclick="menShop()">click here</button>
+    <!-- electronics shop button -->
+    <button id="electronics">click here</button>
 
-  <!-- sports shop button -->
-  <button id="sports">click here</button>
+    <script>
+      //inline Html event handling
+      function menShop() {
+        document.title = "Men Shop"; // this will change the title of the page to "Men Shop" when the button is clicked
+      }
 
-  <!-- electronics shop button -->
-  <button id="electronics">click here</button>
+      // dom event handler using onclick property
+      let sportsBtn = document.getElementById("sports");
 
+      sportsBtn.onclick = function () {
+        document.title = "Sports Shop";
+      };
 
+      // dom event handler using addEventListener
+      
+      // addEventListener allows us to add multiple event listeners to the same element
+      //  without overwriting existing ones, while using the onclick property
+      // will overwrite any existing event handler assigned to that property.
+      // This means that if you use the onclick property to assign a new event handler,
+      // it will replace any previously assigned handler, whereas addEventListener will
+      // allow you to add multiple handlers without interference.
+      //add event listense is a higher order function that takes another function as an
+      // argument and executes it when the specified event occurs. In this case, we are
+      // passing the updateTitle function as a callback to be executed when the 'click'
+      //  event occurs on the electronicsBtn element.
+      //e is the event object that is passed to the event handler function when the event occurs.
+      //  It contains information about the event, such as the type of event, the target element,
+      //  and any additional data associated with the event. In this case, we are not using the
+      // event object, but it is a common practice to include it as a parameter in event handler
+      //  functions to access relevant information about the event if needed.
 
-  <script>
-    //inline Html event handling
-    function menShop() {
-      document.title = "Men Shop"; // this will change the title of the page to "Men Shop" when the button is clicked
-    };
+      let electronicsBtn = document.getElementById("electronics");
+      electronicsBtn.addEventListener("click", function (e) {
+        document.title = "Electronics Shop";
+      });
 
-    // dom event handler using onclick property
-    let sportsBtn = document.getElementById("sports")
-
-    sportsBtn.onclick = function () {
-      document.title = "Sports Shop";
-    }
-
-    // dom event handler using addEventListener
-    // addEventListener allows us to add multiple event listeners to the same element without overwriting existing ones, while using the onclick property will overwrite any existing event handler assigned to that property. This means that if you use the onclick property to assign a new event handler, it will replace any previously assigned handler, whereas addEventListener will allow you to add multiple handlers without interference.
-
-
-    //add event listense is a higher order function that takes another function as an argument and executes it when the specified event occurs. In this case, we are passing the updateTitle function as a callback to be executed when the 'click' event occurs on the electronicsBtn element.
-
-
-    //e is the event object that is passed to the event handler function when the event occurs. It contains information about the event, such as the type of event, the target element, and any additional data associated with the event. In this case, we are not using the event object, but it is a common practice to include it as a parameter in event handler functions to access relevant information about the event if needed.
-
-    
-    let electronicsBtn = document.getElementById('electronics');
-    electronicsBtn.addEventListener('click', function (e) {
-      document.title = 'Electronics Shop'
-    });
-
-    // electronicsBtn.addEventListener('click', updateTitle);
-    // function updateTitle() {
-    //   document.title = 'Electronics Shop'
-    // }
-
-  </script>
-
-</body>
-
+      // electronicsBtn.addEventListener('click', updateTitle);
+      // function updateTitle() {
+      //   document.title = 'Electronics Shop'
+      // }
+    </script>
+  </body>
 </html>

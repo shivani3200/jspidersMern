@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="container-1">
+        <p>this is para</p>
+
+
+        <span style="display: none;">this is span</span>
+    </div>
+    
+    <div id="container-2">
+        <p>this is para</p>
+
+
+        <span style="display: none;">this is span</span>
+    </div>
+    
+    <div id="container-3">
+        <p>this is para</p>
+
+
+        <span style="display: none;">this is span</span>
+    </div>
+    
+    <script>
+        let containerOne = document.getElementById("container-1");
+        let containerTwo = document.getElementById("container-2");
+        let containerThree = document.getElementById("container-3");
+
+        containerOne.textContent = '<h1>text content</h1> <p>this is para</p> <span style="display: none">this is span</span>'
+        containerTwo.innerHTML = '<h1>innerHTML</h1> <p>this is para</p> <span style="display: none">this is span</span>'
+        containerThree.innerText = '<h1>innerTEXT</h1> <p>this is para</p> <span style="display: none">this is span</span>'
+    </script>
+</body>
+</html>

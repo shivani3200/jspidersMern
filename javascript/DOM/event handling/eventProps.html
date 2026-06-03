@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Event Properties</h1>
+    <h2 id="h2-tag">Event Object</h2>
+    <button id="btn">Click me</button>
+    <button id="btn2">Click me too</button>
+
+    <script>
+        let btn = document.getElementById('btn');
+        let btn2 = document.getElementById('btn2');
+        let h2Tag = document.getElementById('h2-tag');
+
+        btn.onclick = function(e){
+            console.log(e); // this will log the event object to the console when the button is clicked
+            console.log(e.type); // this will log the type of event (in this case, "click") to the console
+            console.log(e.target); // this will log the target element (the button that was clicked) to the console
+            h2Tag.textContent = "Button 1 was clicked"; // this will change the text content of the h2 tag to "Button 1 was clicked" when the first button is clicked
+        }
+        btn2.onclick=function(){
+            h2Tag.textContent = "Button 2 was clicked"; // this will change the text content of the h2 tag to "Button 2 was clicked" when the second button is clicked
+        }
+    </script>
+    
+</body>
+</html>

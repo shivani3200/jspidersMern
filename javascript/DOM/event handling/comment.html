@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        max-width: 500px;
+        margin: 40px auto;
+        padding: 24px;
+        background: #f8fafc;
+        border-radius: 16px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .card {
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      }
+
+      .card h1 {
+        margin: 0;
+        font-size: 1.3rem;
+        color: #1e293b;
+      }
+
+      .card h2 {
+        margin-top: 10px;
+        color: #2563eb;
+        font-size: 1.8rem;
+      }
+
+      #totalEngage {
+        text-align: center;
+        padding: 15px;
+        background: #2563eb;
+        color: white;
+        border-radius: 12px;
+        font-size: 1.4rem;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button id="div1" class="card">
+        <h1>Likes</h1>
+        <h2 id="likes-count">0 Likes</h2>
+      </button>
+
+      <button id="div2" class="card">
+        <h1>Comments</h1>
+        <h2 id="comments-count">0 Comments</h2>
+      </button>
+
+      <h2 id="totalEngage">Engaged: 0</h2>
+    </div>
+
+    <script>
+      let div1Tag = document.getElementById("div1");
+      let div2Tag = document.getElementById("div2");
+      let likesCounts = document.getElementById("likes-count");
+      let commentsCounts = document.getElementById("comments-count");
+      let totalEngagecount = document.getElementById("totalEngage");
+
+      let totalEngage = 0;
+      let likeCount = 0;
+      let commentsCount = 0;
+
+      div1Tag.addEventListener("click", function () {
+        likeCount++;
+        totalEngage++;
+        likesCounts.textContent = `${likeCount}-likes`;
+        totalEngagecount.textContent = `engaged : ${totalEngage}`;
+      });
+
+      div2Tag.addEventListener("click", function () {
+        commentsCount++;
+        totalEngage++;
+        commentsCounts.textContent = `${commentsCount}-comments`;
+        totalEngagecount.textContent = `engaged : ${totalEngage}`;
+      });
+    </script>
+  </body>
+</html>

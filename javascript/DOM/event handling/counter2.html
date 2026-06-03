@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="counter">0</h1>
+    <button id="increment1">+1</button>
+    <button id="increment2">+2</button>
+    <button id="increment5">+5</button>
+    <button id="increment10">+10</button>
+    <button id="reset">Reset</button>
+
+
+    <script>
+        let counter = document.getElementById('counter');
+        let count = 0;
+
+        let increment1 = document.getElementById('increment1');
+        let increment2 = document.getElementById('increment2');
+        let increment5 = document.getElementById('increment5');
+        let increment10 = document.getElementById('increment10');
+        let reset = document.getElementById('reset');
+
+        increment1.onclick = function(){
+            count+=1;
+            counter.textContent = count;
+        }
+        increment2.onclick = function(){
+            count+=2;
+            counter.textContent = count;
+        }
+        increment5.onclick = function(){
+            count+=5;
+            counter.textContent = count;
+        }
+        increment10.onclick = function(){
+            count+=10;
+            counter.textContent = count;
+        }
+        reset.onclick = function(){
+            count = 0;
+            counter.textContent = count;
+        }
+    </script>
+</body>
+</html

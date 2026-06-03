@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>countdown</title>
+  </head>
+  <body>
+    <button onclick="addELement()">Add element</button>
+
+    <script>
+        let count = 0;
+      function addELement() {
+        let h1Tag = document.createElement("h1");
+        let pTag = document.createElement("p");
+
+        count++;
+
+        h1Tag.textContent = `shivani ${count}`;
+        pTag.textContent = `kumari ${count}`;
+
+        let bodyTag = document.body;
+
+        // bodyTag.append(h1Tag, pTag, "helloooooo");
+        bodyTag.appendChild(h1Tag, pTag); //
+
+        //attributes
+        h1Tag.hasAttribute('class');
+
+        h1Tag.setAttribute('align','center');
+        h1Tag.setAttribute("class", "color-red");
+        h1Tag.getAttribute('align');
+
+        // h1Tag.removeAttribute('align');
+
+
+        console.log(h1Tag.attributes);
+
+
+      }
+    </script>
+  </body>
+</html>
