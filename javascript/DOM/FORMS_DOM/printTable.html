@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <div>
+        <div id="table">
+          <input type="number" id="input" placeholder="enter any number" />
+          <button id="button">click</button>
+        </div>
+        <div id="display"></div>
+      </div>
+    </div>
+
+    <script>
+      let table = document.getElementById("table");
+      let input = document.getElementById("input");
+      let display = document.getElementById("display");
+      let button = document.getElementById("button");
+
+      button.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        let number = input.value;
+        printTable(number);
+      });
+      
+      function printTable(number) {
+        let string = "";
+
+        for (let i = 1; i <= 10; i++) {
+          string += `${number} * ${i} = ${number * i}<br>`;
+        }
+        display.innerHTML = string;
+      }
+    </script>
+  </body>
+</html>
