@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        width: 300px;
+        height: 30px;
+        border: 1px solid black;
+      }
+      #bar {
+        width: 0%;
+        height: 100%;
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>progress Line</h1>
+
+    <div id="container">
+      <div id="bar"></div>
+      <div id="display"></div>
+    </div>
+
+    <script>
+      let bar = document.getElementById("bar");
+
+      let progress = 0;
+
+      let id = setInterval(() => {
+        console.log("hi");
+        progress += 1;
+
+        bar.style.width = progress + "%";
+        document.getElementById("display").textContent=progress +"%";
+        if (progress >= 100) {
+          clearInterval(id);
+        }
+      }, 100);
+    </script>
+  </body>
+</html>
