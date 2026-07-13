@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stopwatch</title>
+</head>
+<body>
+
+  <h1>Stopwatch</h1>
+  <h1 id="display">00:00:00</h1>
+
+  <button id="start">Start</button>
+  <button id="stop">Stop</button>
+  <button id="reset">Reset</button>
+
+  <script>
+    let hr = 0;
+    let min = 0;
+    let sec = 0;
+
+    let timer = null;
+
+    const display = document.getElementById("display");
+
+    function updateDisplay() {
+      let h = String(hr).padStart(2, "0");
+      let m = String(min).padStart(2, "0");
+      let s = String(sec).padStart(2, "0");
+
+      display.innerText = `${h}:${m}:${s}`;
+    }
+
+    function startWatch() {
+      if (timer !== null) return;
+
+      timer = setInterval(() => {
+        sec++;
+
+        if (sec === 60) {
+          sec = 0;
+          min++;
+        }
+
+        if (min === 60) {
+          min = 0;
+          hr++;
+        }
+
+        updateDisplay();
+      }, 1000);
+    }
+
+    function stopWatch() {
+      clearInterval(timer);
+      timer = null;
+    }
+
+    function resetWatch() {
+      clearInterval(timer);
+      timer = null;
+
+      hr = 0;
+      min = 0;
+      sec = 0;
+
+      updateDisplay();
+    }
+
+    document
+      .getElementById("start")
+      .addEventListener("click", startWatch);
+
+    document
+      .getElementById("stop")
+      .addEventListener("click", stopWatch);
+
+    document
+      .getElementById("reset")
+      .addEventListener("click", resetWatch);
+  </script>
+
+</body>
+</html>

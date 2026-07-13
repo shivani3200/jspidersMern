@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Current Time</h1>
+    <p id="time"></p>
+
+    <script>
+        //inbulit function
+        // function updateTime() {
+        //     const now = new Date();
+        //     document.getElementById('time').textContent = now.toLocaleString();
+        // }
+
+        // // Update time immediately
+        // updateTime();
+
+        // // Update time every second
+        // setInterval(updateTime, 1000);
+
+
+        function updateTime() {
+            const now = new Date();
+
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+
+            let hr = hours < 10 ? '0' + hours : hours;
+            let min = minutes < 10 ? '0' + minutes : minutes;
+            let sec = seconds < 10 ? '0' + seconds : seconds;
+            document.getElementById('time').textContent = `${hr}:${min}:${sec}`;
+        }
+
+        // Update time immediately
+        updateTime();
+
+        // Update time every second
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>

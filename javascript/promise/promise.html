@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const p1 = new Promise((resolve, reject) => {
+        let bool = false;
+
+        let details = [
+          { id: 101, product: "abc" },
+          { id: 102, product: "shivani" },
+          { id: 103, product: "kumari" },
+        ];
+
+        if (bool) {
+          resolve(details);
+        } else {
+          reject("rejected");
+        }
+      });
+
+      p1.then((data) => {
+        console.log(data);
+      })
+        .catch((err) => {
+          console.log(err);
+        })
+        .finally(() => {
+          console.log("finally");
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+let s1 = 'banana';
+let str =[...s1];
+
+let max = 0;
+let res=str[0];
+
+for(let i = 0; i<str.length; i++){
+    let count  = 1;
+
+    if(str[i]=='')continue;
+    for(let j = i+1; j< str.length; j++){
+        if(str[i]==str[j]){
+            count++;
+            str[j]='';
+        }
+        if(count>max){
+            max = count;
+            res=str[i];
+        }
+    }
+}
+
+console.log(res+":"+max);
